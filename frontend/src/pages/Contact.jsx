@@ -19,9 +19,9 @@ const Contact = () => {
             <br/>Greater Noida,Uttar Pradesh 201310
           </p>
           <p className=' text-gray-500'>Tel: (415) 555-0132
-            <br/>Email: admin@now.com
+            <br/>Email: admin@forever.com
           </p>
-          <p className='font-semibold text-xl text-gray-600'>Careers at Now</p>
+          <p className='font-semibold text-xl text-gray-600'>Careers at Forever</p>
           <p className='text-gray-500'>Learn more about our teams and job openings.</p>
           <button className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>
             Explore Jobs
