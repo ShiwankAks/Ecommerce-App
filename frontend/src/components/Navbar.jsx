@@ -55,6 +55,7 @@ const Navbar = () => {
                 <p className="cursor-pointer hover:text-black">My Profile</p>
                 <p onClick={()=>navigate('/orders')} className="cursor-pointer hover:text-black">Orders</p>
                 <p onClick={()=>logout()} className="cursor-pointer hover:text-black">Logout</p>
+                
             </div>
           </div>
          }
@@ -79,6 +80,7 @@ const Navbar = () => {
             <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/collection'>COLLECTION</NavLink>
             <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/about'>ABOUT</NavLink>
             <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/contact'>CONTACT</NavLink>
+            <a href={import.meta.env.VITE_ADMIN_URL}onClick={()=>setVisible(false)} target="_blank" rel="noopener noreferrer" className='py-2 pl-6 border'>Admin Panel</a>
         </div>
       </div>
     </div> 
