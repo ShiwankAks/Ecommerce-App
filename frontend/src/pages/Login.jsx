@@ -20,6 +20,8 @@ const Login = () => {
       
       if(currentState=== 'Sign Up'){
         const response= await axios.post(backendUrl+'/api/user/register',{name,email,password})
+                console.log(response.data)
+
         if (response.data.success) {
           setToken(response.data.token)
           localStorage.setItem('token',response.data.token)
@@ -79,13 +81,15 @@ const Login = () => {
         {
           currentState=== 'Login' 
           ?
-           <p onClick={()=> setCurrentState('Sign up')} className=' cursor-pointer'>Create account</p>
+           <p onClick={()=> setCurrentState('Sign Up')} className=' cursor-pointer'>Create account</p>
           :
            <p onClick={()=> setCurrentState('Login')} className=' cursor-pointer'>Login</p>
         }
         
       </div>
-      <button className='bg-black text-white font-light px-8 py-2 mt-4 cursor-pointer'> {currentState==='Login'? 'Sign In': 'Sign Up' } </button>
+      <button 
+      className='bg-black text-white font-light px-8 py-2 mt-4 cursor-pointer'>
+         {currentState==='Login'? 'Sign In': 'Sign Up' } </button>
     </form>
   )
 }
